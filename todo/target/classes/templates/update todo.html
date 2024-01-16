@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Task</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/add todo style.css}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Edit Task</h2>
+    <form th:action="@{/update/{id}(id=${todo.id})}" th:object="${todo}" method="post">
+        <label for="task">Task:</label>
+        <input type="text" id="task" name="task" th:field="*{task}" required><br>
+
+        <label for="dueDate">Author:</label>
+        <input type="datetime-local" id="dueDate" name="dueDate" th:field="*{dueDate}" required><br>
+
+        <button type="submit">Add Task</button>
+    </form>
+
+</div>
+</body>
+</html>

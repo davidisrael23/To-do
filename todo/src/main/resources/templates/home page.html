@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to the Bookstore</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/home page style.css}">
+</head>
+<body>
+<div class="container">
+  <h1 th:text="${message}"></h1>
+  <p>Make your life easier and organized</p>
+  <div>
+    <a th:href="@{/todos}" role="button">To Do List</a>
+    <a th:href="@{/addForm}" role="button">Add Item</a>
+  </div>
+</div>
+</body>
+</html>

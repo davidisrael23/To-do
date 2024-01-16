@@ -1,0 +1,35 @@
+body {
+  background-color: #121212; /* Dark background color */
+  color: #ffffff; /* Light text color */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  padding: 100px;
+}
+
+h1 {
+  color: #3498db; /* Dark blue color for the heading */
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+a {
+  background-color: #3498db; /* Dark blue color for the buttons */
+  color: #ffffff; /* Light text color for the buttons */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+a:hover {
+  background-color: #297fb8; /* Slightly darker blue color on hover */
+}

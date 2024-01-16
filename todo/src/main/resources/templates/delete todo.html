@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Delete Book</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/add todo style.css}">
+</head>
+<body>
+
+<div class="container">
+  <h2>Delete Book</h2>
+  <p>Are you sure that you have completed the task of <span th:text="${todo.task}"></span></p>
+  <form th:action="@{/delete/{id}(id=${todo.id})}" th:object="${todo}" method="post">
+    <button type="submit">Yes, Remove Task</button>
+  </form>
+  <a th:href="@{/todos}" id="todo list">No go back</a>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Book List</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/to do list style.css}">
+</head>
+<body>
+<h2>To Do List</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Task</th>
+    <th>Due Date</th>
+    <th>Update</th>
+    <th>Done</th>
+  </tr>
+  <tr th:each="todo : ${todos}">
+    <td th:text="${todo.id}"></td>
+    <td th:text="${todo.task}"></td>
+    <td th:text="${#temporals.format(todo.dueDate, 'dd-MM-yyyy HH:mm')}"></td>
+    <td><a th:href="@{/updateForm/{id}(id=${todo.id})}" id="update">Edit</a></td>
+    <td><a th:href="@{/deleteForm/{id}(id=${todo.id})}" id="delete">Done</a></td>
+  </tr>
+</table>
+<a th:href="@{/}" id="home">Home</a>
+<a th:href="@{/addForm}" id="add">Add Task</a>
+</body>
+</html>
